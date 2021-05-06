@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="mapper.Users-Mapper">
+
+<select id="getBoardList" resultType="board">
+select * from users;
+</select>
+</mapper>
