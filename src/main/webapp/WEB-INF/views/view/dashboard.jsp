@@ -18,6 +18,7 @@
 </head>
 <body>
 <p>알뜰시장</p>
+<p>환영합니다 ${sessionScope.loginUser }님 <a href="/jquery/logout">로그아웃</a></p>
 <div>게시글 리스트</div>
 <table>
 <thead><tr>
@@ -32,7 +33,7 @@
 <c:forEach var="b" items="${result }">
 <fmt:formatDate value="${b.updatetime}" pattern="yyyy-MM-dd HH:MM:ss" var="dateFormat_cr"/>
 <tr>
-<td>${b.title }</td>
+<td><a href="/view/boardDetail?id=${b.id }">${b.title }</a></td>
 <td>${b.views }</td>
 <td>${b.users }</td>
 <td>${b.choose }</td>

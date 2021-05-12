@@ -17,5 +17,17 @@ public class BoardServiceImpl implements BoardService {
 	public List<Board> getBoardList() {
 		return boardDAO.getBoardList();
 	}
+	
+	@Override
+	public int boardwrite(Board board) {
+	return boardDAO.boardwrite(board);}
+	
+	@Override
+	public Board getBoardDetail(int id) {
+	return boardDAO.getBoardDetail(id);}
 
+	@Override
+	public void viewsUpdate(int id) {
+	boardDAO.viewUpdate(id);}
+	
 }

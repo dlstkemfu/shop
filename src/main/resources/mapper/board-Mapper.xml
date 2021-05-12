@@ -5,4 +5,18 @@
 <select id="getBoardList" resultType="board">
 SELECT * FROM board order BY updatetime DESC;
 </select>
+
+<insert id="boardwrite">
+insert into board (category,title,region,choose,object,views,price,content,picture,users,updatetime) 
+values(#{category},#{title},null,#{choose},null,#{views},#{price},#{content},null,#{users},now());
+</insert>
+
+<select id="getBoardDetail" resultType="board">
+SELECT * FROM board where id = #{id};
+</select>
+
+<!-- update -->
+<update id="viewUpdate">
+UPDATE board SET views = views+1 WHERE id = #{id}
+</update>
 </mapper>

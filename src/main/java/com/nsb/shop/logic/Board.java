@@ -3,7 +3,8 @@ package com.nsb.shop.logic;
 import java.util.Date;
 
 public class Board { 
-
+	
+	private int id;
 	private String category;
 	private String title;
 	private String region;
@@ -17,9 +18,9 @@ public class Board {
 	private Date updatetime;
 	@Override
 	public String toString() {
-		return "Board [category=" + category + ", title=" + title + ", region=" + region + ", choose=" + choose
-				+ ", object=" + object + ", views=" + views + ", price=" + price + ", content=" + content + ", picture="
-				+ picture + ", users=" + users + ", updatetime=" + updatetime + "]";
+		return "Board [id=" + id + ", category=" + category + ", title=" + title + ", region=" + region + ", choose="
+				+ choose + ", object=" + object + ", views=" + views + ", price=" + price + ", content=" + content
+				+ ", picture=" + picture + ", users=" + users + ", updatetime=" + updatetime + "]";
 	}
 	public String getCategory() {
 		return category;
@@ -29,6 +30,12 @@ public class Board {
 	}
 	public String getTitle() {
 		return title;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 	public void setTitle(String title) {
 		this.title = title;
